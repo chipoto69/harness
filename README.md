@@ -29,10 +29,33 @@ v2 is a ground-up rebuild for the current Claude Code multi-agent runtime:
 ## Core features
 
 - **Agent team design** — six architecture patterns (Pipeline, Fan-out/Fan-in, Expert Pool, Producer-Reviewer, Supervisor, Hierarchical Delegation), each mapped to its best v2 execution mode
-- **Skill generation** — context-efficient skills via Progressive Disclosure
+- **Skill generation** — context-efficient skills via Progressive Disclosure, with reuse checks before generating duplicate agents or skills
 - **Orchestration** — data-passing protocols (structured schemas, files, messages, tasks), error handling, resume support
 - **Verification** — trigger evals, dry runs, with-skill vs. without-skill A/B testing (optionally as a workflow itself)
 - **Evolution** — `/harness:evolve` turns usage feedback into measurable next-generation improvements
+
+## Category — Where Harness Sits
+
+Harness lives at the **L3 Meta-Factory** layer of the Claude Code ecosystem — the layer that generates other harnesses rather than being one. Inside L3, it occupies the **Team-Architecture Factory** sub-layer.
+
+| Layer | What it does | Neighbors we coexist with |
+|-------|--------------|---------------------------|
+| **L3 — Meta-Factory / Team-Architecture Factory** (us) | Domain sentence → agent team + skills, via six pre-defined team patterns | — |
+| L3 — Meta-Factory / Runtime-Configuration Factory | Deterministic, repeatable runtime configurations | [coleam00/Archon](https://github.com/coleam00/Archon) |
+| L3 — Meta-Factory / Codex Runtime Port | Same concept, Codex runtime | [SaehwanPark/meta-harness](https://github.com/SaehwanPark/meta-harness) |
+| L2 — Cross-Harness Workflow | Standardize skills/rules/hooks across multiple harnesses | [affaan-m/ECC](https://github.com/affaan-m/everything-claude-code) |
+
+> Archon generates deterministic runtime configurations. Harness generates team architectures plus the skills agents use. Pick Archon for runtime determinism, Harness for team architecture, or combine them.
+
+## Star History
+
+<a href="https://www.star-history.com/?repos=revfactory%2Fharness&type=date&legend=top-left">
+ <picture>
+   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/chart?repos=revfactory/harness&type=date&theme=dark&legend=top-left" />
+   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/chart?repos=revfactory/harness&type=date&legend=top-left" />
+   <img alt="Star History Chart" src="https://api.star-history.com/chart?repos=revfactory/harness&type=date&legend=top-left" />
+ </picture>
+</a>
 
 ## Workflow
 
@@ -53,7 +76,7 @@ Phase 7: Maintenance — evolution via /harness:evolve
 
 ```shell
 /plugin marketplace add revfactory/harness
-/plugin install harness@harness
+/plugin install harness@harness-marketplace
 ```
 
 ### As global skills

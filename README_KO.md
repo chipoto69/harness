@@ -53,7 +53,7 @@ Phase 7: 운영/유지보수 — 진화는 /harness:evolve
 
 ```shell
 /plugin marketplace add revfactory/harness
-/plugin install harness@harness
+/plugin install harness@harness-marketplace
 ```
 
 ### 글로벌 스킬로 직접 설치
