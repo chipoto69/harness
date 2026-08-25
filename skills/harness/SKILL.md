@@ -98,7 +98,7 @@ v2는 현행 Claude Code의 세 가지 멀티에이전트 프리미티브에 대
 
 신규 에이전트 생성 전, `프로젝트/.claude/agents/`의 기존 에이전트와 중복 여부를 확인한다. 하네스를 반복 구축하다 보면 역할이 겹치는 에이전트가 다른 이름으로 누적되기 쉽다.
 
-> 중복 분류 기준과 재사용 설계는 `references/agent-design-patterns.md`의 "에이전트 재사용 설계" 참조.
+> 중복 분류 기준과 재사용 설계는 `references/team-patterns.md`의 "에이전트 분리 기준" 및 관련 설계 섹션 참조.
 
 **모든 에이전트는 반드시 `프로젝트/.claude/agents/{name}.md` 파일로 정의한다.** 에이전트 정의 파일 없이 Agent 도구의 prompt에 역할을 직접 넣는 것은 금지한다. 이유:
 - 파일로 존재해야 다음 세션에서 재사용 가능하고, `subagent_type: "{name}"`(Agent 도구) 및 `agentType: "{name}"`(Workflow)으로 호출 가능
