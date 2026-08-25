@@ -136,7 +136,7 @@ bigquery-skill/
 ```markdown
 ## 문서 편집
 단순 편집은 XML을 직접 수정.
-**추적 변경이 필요하면**: [REDLINING.md](references/redlining.md) 참조
+**추적 변경이 필요하면**: `REDLINING.md` 같은 전용 레퍼런스 참조
 ```
 
 ### 패턴 3: 대형 레퍼런스 파일 구조
